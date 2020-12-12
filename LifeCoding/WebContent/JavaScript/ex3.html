@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+   <title>생활코딩 실습</title>
+   <meta charset="utf-8">
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+	  
+	 <input id="night_day"type="button" value="night" onclick="
+	 	var target = document.querySelector('body');
+	  	if(this.value ==='night'){
+	  		target.style.backgroundColor='black';
+	  		target.style.color='white';
+		  	this.value = 'day';
+		  	
+		var alist = document.querySelectorAll('a');
+		var i = 0;
+			while(i<alist.length){
+				    alist[i].style.color='powderblue';
+			    	i=i+1;
+				}
+	  	}else{
+	  		target.style.backgroundColor='white';
+	  		target.style.color='black';
+		  	this.value = 'night';
+		  	
+		  	var alist = document.querySelectorAll('a');
+			var i = 0;
+			while(i<alist.length){
+			    alist[i].style.color='blue';
+			    i=i+1;
+		}
+  	}
+	 ">
+
+		<ol>
+		  <li><a href="ex1.html">HTML</a></li>
+		  <li><a href="ex2.html">CSS</a></li>
+		  <li><a href="ex3.html">JavaScript</a></li>
+		</ol>
+
+<h2>JavaScript</h2>
+JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.[8] JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it.
+
+	 <input id="night_day2"type="button" value="night" onclick="
+	  	if(this.value ==='night'){
+	  		document.querySelector('body').style.backgroundColor='black';
+		  	document.querySelector('body').style.color='white';
+		  	this.value = 'day';
+	  	}else{
+	  		document.querySelector('body').style.backgroundColor='white';
+		  	document.querySelector('body').style.color='black';
+		  	this.value = 'night';
+		}
+	  ">
+	</body>
+</html>
