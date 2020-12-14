@@ -1,21 +1,24 @@
 
-var Links = {
-	   setColor:function(color){
-			var alist = document.querySelectorAll('a');
-			var i = 0;
-				while(i < alist.length){
-				    alist[i].style.color=color;
-			    	i = i + 1 ;
-				}
-		   	}
-  		}
+	var Links = {
+		   setColor:function(color){
+	//			var alist = document.querySelectorAll('a');
+	//			var i = 0;
+	//				while(i < alist.length){
+	//				    alist[i].style.color=color;
+	//			    	i = i + 1 ;
+	//				}
+		   	$('a').css('color',color)
+		 }
+	}
    
 	var Body = {
 		setColor:function(color){
-			document.querySelector('body').style.color = color;
+			//document.querySelector('body').style.color = color;
+			$('body').css('color',color)
 		},		//객체의 property와 property를 구분할 때, ( , )콤마를 사용
 		setBackgroundColor:function(color){
-			document.querySelector('body').style.backgroundColor = color;
+			//document.querySelector('body').style.backgroundColor = color;
+			$('body').css('backgroundColor',color)
 		} 
 	}
 	
