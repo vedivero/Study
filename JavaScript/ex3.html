@@ -3,24 +3,48 @@
 <head>
    <title>WEB1 - JavaScript</title>
    <meta charset="utf-8">
-   <script type="text/javascript">
-   		
-   function LinksSetColor(color){
-		var alist = document.querySelectorAll('a');
-		var i = 0;
-			while(i < alist.length){
-				    alist[i].style.color=color;
-			    	i=i+1;
-			}
-   	}		
    
-	function BodySetColor(color){
-		document.querySelector('body').style.color = color;
+<!--    function : 코드를 정리정돈 -->
+<!--    Property : 함수와 변수가 많아지면 grouping해서 정리정돈 -->
+<!--    include : 공통되는 객체를 파일로 따로 생성해서 정돈-->
+   
+   <script type="text/javascript" src="colors.js">
+   		
+	// var Links = {
+	// setColor:function(color){
+	//	var alist = document.querySelectorAll('a');
+	// 	var i = 0;
+	// 		while(i < alist.length){
+	// 		    alist[i].style.color=color;
+	// 		   	i = i + 1 ;
+	// 				}
+	// 		}
+	//   }
+   
+		//function LinksSetColor(color){
+		//var alist = document.querySelectorAll('a');
+		//var i = 0;
+		//	while(i < alist.length){
+		//    alist[i].style.color=color;
+		//	 	i=i+1;
+		// 	}
+		//}		
+   
+	var Body = {
+		setColor:function(color){
+			document.querySelector('body').style.color = color;
+		},		//객체의 property와 property를 구분할 때, ( , )콤마를 사용
+		setBackgroundColor:function(color){
+			document.querySelector('body').style.backgroundColor = color;
+		} 
 	}
 	
-	function BodySetBackgroundColor(color){
-		document.querySelector('body').style.backgroundColor = color;
-	}
+		// 	function BodySetColor(color){
+		// 		document.querySelector('body').style.color = color;
+		// 	}
+		// 	function BodySetBackgroundColor(color){
+		// 		document.querySelector('body').style.backgroundColor = color;
+		// 	}
 	
 	function nightDayHandler(self){
 			
