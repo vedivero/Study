@@ -4,3 +4,4 @@ test
 
 git commit -am "message"
 (단, 해당 파일이 이전에 commit했던 기록이 있어야 함)
+
