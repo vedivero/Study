@@ -1,7 +1,0 @@
-$git reset		--hard HEAD^(all reset)
-		--mixed HEAD^(reset to Staging Area )
-		--soft HEAD^(to commit )
-
-	HEAD : 가장 최근 version에서
-	   ^   : 하나를 되돌림
-		→ ^^: 둘을 되돌림
