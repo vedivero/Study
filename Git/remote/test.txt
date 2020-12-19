@@ -3,3 +3,8 @@ remote
 git remote add '지정이름' 'url'  ←로 지정 후
 git push -u(default) '지정이름'으로 push를 한 후,
 git push만 해도 default로 설정된 url로 저장이 됨
+
+원격 저장소(git-hub)에서 해당 파일을 수정하고
+로컬 저장소에 동기화하려면??
+
+git pull origin main
