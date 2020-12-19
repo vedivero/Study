@@ -1,0 +1,20 @@
+git init : git과 연동
+
+git add : Staging Area에 저장
+
+git commit -m "message" : 변경사항 comment 작성
+
+git push : 로컬 저장소 → 원격 저장소
+
+git status : 현재 상태
+
+git reset --hard HEAD^ : Working Area까지 reset, 모든 작업 reset (HEAD^ : ^(한 단계 이전)
+            --mixed HEAD^ : Staging Area까지 reset
+            --soft HEAD^ :  Repository Area reset
+
+git remote add 'name' 'URL' : 저장할 URL지정
+git remote -v : remote 정보 확인
+
+git checkout 'branch name' : change branch
+
+git clone 'URL' : 해당 URL의 내용 복사
