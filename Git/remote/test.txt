@@ -1,1 +1,5 @@
 remote
+
+git remote add '지정이름' 'url'  ←로 지정 후
+git push -u(default) '지정이름'으로 push를 한 후,
+git push만 해도 default로 설정된 url로 저장이 됨
