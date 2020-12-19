@@ -3,5 +3,5 @@
                       로컬 저장소는 변경사항 없지만, 원격 저장소 변경
                         ↓
                       $ git pull ( = $ git pull origin main)로 동기화 (원격 저장소에 내용을 가져와서 merge)
-                        ↓
-                      
+
+                  
