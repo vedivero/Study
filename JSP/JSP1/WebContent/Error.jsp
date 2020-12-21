@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" errorPage="Error.jsp" isErrorPage="true"%>
-
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,9 +8,9 @@
 </head>
 <body>
 
-	<%
-		int sum = 10/0; //에러코드를 작성(프로그래밍에서는 0으로 나눌 수 없다 arithmetic exception)
-	%>
+	This is Error Page	
 	
+	<a href="PageDirective.jsp">이전 페이지</a>
+
 </body>
 </html>
