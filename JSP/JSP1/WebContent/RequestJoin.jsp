@@ -15,29 +15,29 @@
 					<tr height="50">
 						<td width="150" align="center">ID</td>
 						<td width="350" align="center">
-							<input type="text" name="id" size="40">
+							<input type="text" name="id" size="40" placeholder="ID를 입력하세요.">
 						</td>
 					</tr>
 					<tr height="50">
-						<td width="150" align="center">password</td>
+						<td width="150" align="center">PASSWORD</td>
 						<td width="350" align="center">
-							<input type="password" name="pass1" size="40">
+							<input type="password" name="pass1" size="40" placeholder="6~14자리의 비밀번호를 입력하세요.">
 						</td>
 					</tr>
 					<tr height="50">
-						<td width="150" align="center">password 확인</td>
+						<td width="150" align="center">PASSWORD 확인</td>
 						<td width="350" align="center">
-							<input type="password" name="pass2" size="40">
+							<input type="password" name="pass2" size="40" placeholder="동일한 비밀번호를 한번 더 입력하세요.">
 						</td>
 					</tr>
 					<tr height="50">
-						<td width="150" align="center">email</td>
+						<td width="150" align="center">EMAIL</td>
 						<td width="350" align="center">
 							<input type="email" name="email" size="40">
 						</td>
 					</tr>
 					<tr height="50">
-						<td width="150" align="center">ID</td>
+						<td width="150" align="center">TEL</td>
 						<td width="350" align="center">
 							<input type="tel" name="tel" size="40">
 						</td>
@@ -69,10 +69,11 @@
 							<input type="radio" name="age" value="thirty">thirty &nbsp;&nbsp;
 							<input type="radio" name="age" value="forty">forty &nbsp;&nbsp;
 					<tr height="50">
-						<td width="150" align="center">comment</td>
+						<td width="150" align="center">COMMENT</td>
 						<td width="350" align="center">
 							<textarea rows="5" cols="40" name="comment"></textarea>
 						</td>
+					</tr>
 					<tr height="50">
 						<td align="center" colspan="2">
 							<input type="submit" value="Join">
