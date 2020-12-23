@@ -10,7 +10,7 @@
 
 	<center>
 		<h2>Join us</h2>
-			<form action="RequestJoinProc.jsp" method="post">
+			<form action="MemberJoinProc.jsp" method="post">
 				<table width="500" border="1">
 					<tr height="50">
 						<td width="150" align="center">ID</td>
