@@ -7,6 +7,7 @@
 <html>
 <body>
 	
+	
 	<!-- 1.Data Base에 저장된 모든 회원의 정보를 가져옴 -->
 	<!-- 2.table Tag를 사용해 화면에 모든 회원 정보 출력 -->
 	
@@ -26,8 +27,42 @@
 	//data가 들어갈때도 나올떄도 MemberBean으로 처리 → Object Castion이 필요없어짐
 	//<Extension(확장이 가능)>를 하지 않으면 Object형태가 된다.
 	//Object형태로 Data를 집어넣는건 크게 불편하지 않지만, 꺼내올 때는 down Casting을 해줘야 하는 번거로움 발생
-	
+
 %>
+
+<!-- 	Vector에 저장된 data들을 table tag를 사용해 출력 -->
+
+	<center>
+		<h1>모든 회원목록 보기</h1>
+		<table width="800" border="1">
+			<tr height="60">
+				<td align="center" width="150">ID</td>
+				<td align="center" width="250">EMAIL</td>
+				<td align="center" width="200">TEL</td>
+				<td align="center" width="200">HOBBY</td>
+			</tr>
+			<%
+				for(int i=0; i<vec.size(); i++){
+					//data 추출
+					MemberBean bean = vec.get(i);
+					//vector에 담긴 bean class를 하나씩 추출
+			%>
+			<tr height="60">
+				<td align="center" width="150"><a href="MemberInfo.jsp?id=<%=bean.getId()%>"><%=bean.getId() %></a></td>
+				<td align="center" width="250"><%=bean.getEmail() %></td>
+				<td align="center" width="200"><%=bean.getTel() %></td>
+				<td align="center" width="200"><%=bean.getHobby() %></td>
+			</tr>
+			
+			<%
+				}
+			%>
+		</table>
+	</center>
+
+
+
+
 
 </body>
 </html>

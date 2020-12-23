@@ -67,4 +67,11 @@ public class MemberBean {
 		this.comment = comment;
 	}
 	
+	@Override
+	public String toString() {
+		return "MemberBean [id=" + id + ", pass1=" + pass1 + ", pass2=" + pass2 + ", email=" + email + ", tel=" + tel
+				+ ", hobby=" + hobby + ", job=" + job + ", age=" + age + ", comment=" + comment + "]";
+	}
+	
+	
 }

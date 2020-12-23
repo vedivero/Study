@@ -21,6 +21,7 @@ public class MemberDAO {
 	Connection con;
 	
 	//Data Base에서 Query를 실행해주는 객체
+	String sql ="";
 	PreparedStatement pstmt;
 	
 	//Data Base에서 처리한 결과를 Java에 저장해주는 객체
@@ -88,12 +89,78 @@ public class MemberDAO {
 	//모든 회원 정보를 return해주는 method
 	public Vector<MemberBean> allSelectMember(){
 		
-		Vector<MemberBean> v = new Vector<>();
+		Vector<MemberBean> v = new Vector<>(); 
 				
-		
+		try {
+			getCon();
+			
+			sql = "select * from member";
+			pstmt = con.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery();
+			
+			//resultSet에 저장된 data를 꺼내와야 한다.
+			while(rs.next()){  //rs.next = 저장된 data만큼만 while문을 돌리겠다.
+				MemberBean bean = new MemberBean(); //한 컬럼의 값은 하나에 가방에만 저장
+				
+				//DB에서 꺼내온 data를 한 가방의 여러 칸에 각각 setting해주기
+				bean.setId(rs.getString(1));
+				bean.setPass1(rs.getString(2));
+				bean.setEmail(rs.getString(3));
+				bean.setTel(rs.getString(4));
+				bean.setHobby(rs.getString(5));
+				bean.setJob(rs.getString(6));
+				bean.setAge(rs.getString(7));
+				bean.setComment(rs.getString(8));
+				
+				//알맞게 저장된 data 즉, 패키징 된 memberBean Class를 Vector에 저장
+				v.add(bean);	//index 0부터 순서대로 data가 저장
+			}
+			
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		return v;
 	}
 	
+	//한 사람에 대한 정보를 return
+	public MemberBean oneSelectMember(String id){
+		
+		MemberBean bean = new MemberBean();
+		
+		try {
+			getCon();
+			
+			sql = "select * from member where id=?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()){	//record가 있다면
+				
+				//data저장소, bean에 전달받은 id에 해당하는 모든 컬럼값을 넘겨주시 위해 setting
+				bean.setId(rs.getString(1));
+				bean.setPass1(rs.getString(2));
+				bean.setEmail(rs.getString(3));
+				bean.setTel(rs.getString(4));
+				bean.setHobby(rs.getString(5));
+				bean.setJob(rs.getString(6));
+				bean.setAge(rs.getString(7));
+				bean.setComment(rs.getString(8));
+				
+				System.out.println("Bean : "+bean);
+			}
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return bean;
+	}
 	
 }
