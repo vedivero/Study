@@ -79,6 +79,7 @@
 		System.out.println(" Proc : MemberDAO 객체 생성완료");
 		
 	mdao.insertMember(mbean);
+		System.out.print("mdao에 insertMember() method호출 완료");
 %>
 	
 </body>

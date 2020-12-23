@@ -28,10 +28,12 @@ public class MemberDAO {
 	public void getCon(){
 		
 		try{
-			Class.forName("jdbc:mysql://localhost:3306/jsp");
-			con = DriverManager.getConnection(url, id, pw);
+			Class.forName("com.mysql.jdbc.Driver");
 			
-		}catch(Exception e){
+			con = DriverManager.getConnection(url, id, pw);
+				
+				
+			}catch(Exception e){
 			
 		}
 		
@@ -48,14 +50,15 @@ public class MemberDAO {
 //			//2.해당 data base에 접속
 //			Connection con = DriverManager.getConnection(url,id,pw);	
 			
-			//getCon() method호출로 DB연결
+			//1, 2번에 해당하는 동작을 getCon() method 호출로 처리
 			getCon();
-		
+			System.out.println("insertMember() : DB연결 완료");
 			//3.접속 후 Query준비
-			String sql= "insert into member values(?,?,?,?,?,?,?,?)";
+			String sql = "insert into member values(?,?,?,?,?,?,?,?)";
 			
 			// Query를 사용하도록 설정
 			PreparedStatement pstmt = con.prepareStatement(sql);
+			System.out.println("Query실행할 PreparedStatement객체 준비 완료");
 			
 			// ?에 들어갈 data를 mapping
 			pstmt.setString(1, mbean.getId());
@@ -66,9 +69,11 @@ public class MemberDAO {
 			pstmt.setString(6, mbean.getJob());
 			pstmt.setString(7, mbean.getAge());
 			pstmt.setString(8, mbean.getComment());
+			System.out.println("Bean 객체에 정보 저장 완료");
 			
 			//4.준비한 Query를 실행
 			pstmt.executeUpdate();	//insert, update, delete시 사용 ↔ select = executeQuery();
+			System.out.println("Query실행하여 정보 insert완료");
 			
 			//5.자원 반납
 			con.close();
