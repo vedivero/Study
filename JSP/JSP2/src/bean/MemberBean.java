@@ -2,6 +2,7 @@ package bean;
 
 public class MemberBean {
 
+	//jsp와 database간의 data를 주고받는 module
 	//jsp에서 data의 내용를 자동으로 자바에다가 넣어주기 위해서 사용하는 Bean
 	
 	//data를 은닉하기 위해 private
@@ -43,6 +44,5 @@ public class MemberBean {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
 	
 }
