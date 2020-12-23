@@ -80,6 +80,10 @@
 		
 	mdao.insertMember(mbean);
 		System.out.print("mdao에 insertMember() method호출 완료");
+		
+	//회원 가입이 정상적으로 처리된 후, 회원 정보를 보여주는 페이지로 이동
+	//forward를 사용하지 않아도 되는 이유 : data를 가지고 가지 않는다
+	response.sendRedirect("MemberList.jsp");
 %>
 	
 </body>

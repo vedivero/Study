@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Vector;
 
 public class MemberDAO {
 
@@ -84,7 +85,15 @@ public class MemberDAO {
 	}
 	
 	
-	
+	//모든 회원 정보를 return해주는 method
+	public Vector<MemberBean> allSelectMember(){
+		
+		Vector<MemberBean> v = new Vector<>();
+				
+		
+		
+		return v;
+	}
 	
 	
 }
