@@ -36,10 +36,10 @@
 		<h1>모든 회원목록 보기</h1>
 		<table width="800" border="1">
 			<tr height="60">
-				<td align="center" width="150">ID</td>
-				<td align="center" width="250">EMAIL</td>
-				<td align="center" width="200">TEL</td>
-				<td align="center" width="200">HOBBY</td>
+				<td align="center" width="150"><b>ID</b></td>
+				<td align="center" width="250"><b>EMAIL</b></td>
+				<td align="center" width="200"><b>TEL</b></td>
+				<td align="center" width="200"><b>HOBBY</b></td>
 			</tr>
 			<%
 				for(int i=0; i<vec.size(); i++){
