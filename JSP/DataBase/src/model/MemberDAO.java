@@ -187,4 +187,60 @@ public class MemberDAO {
 		}
 		return pass;
 	}
+	
+	
+	
+	//회원 정보를 수정하는 method
+	
+	public void updateMember(MemberBean mbean){
+		
+		getCon();
+
+		try {
+			
+			
+			sql = "update member set email=?,tel=? where id=?";
+			
+			//Query를 실행하는 객체 pstmt
+			pstmt = con.prepareStatement(sql);
+
+			//?의 값을 mapping
+			pstmt.setString(1, mbean.getEmail());
+			pstmt.setString(2, mbean.getTel());
+			pstmt.setString(3, mbean.getId());
+			
+			//Query실행
+			pstmt.executeUpdate();
+
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	//회원 정보를 삭제하는 method
+	public void deleteMember(String id){
+		
+		getCon();
+		
+		try {
+			
+			sql = "delete from member where id=?";
+					
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+			
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
 }

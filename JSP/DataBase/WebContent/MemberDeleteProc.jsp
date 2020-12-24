@@ -5,6 +5,7 @@
 <html>
 <body>
 
+
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
@@ -13,19 +14,17 @@
 	</jsp:useBean>
 	
 <%
-	// ↓ mbean에서 id값을 가져왔으므로 중복되는 코드
-	// String id = request.getParameter("id");
 	
 	MemberDAO mdao = new MemberDAO();
 	
 	//DataBase에서 꺼내온 PassWord값이 저장
-	String pass = mdao.getPass(id);
+	String pass = mdao.getPass(mbean.getId());
 	
 	//입력받은 PassWord값과 DataBase에서 가져온 PassWord값이 같은지를 비교 후
 	if(mbean.getPass1().equals(pass)){
 		//같은 경우 정보 수정
 		//수정하는 method 호출
-		mdao.updateMember(mbean);
+		mdao.deleteMember(mbean.getId());
 		
 		//수정이 완료되면 페이지 전환
 		response.sendRedirect("MemberList.jsp");
@@ -40,5 +39,6 @@
 		<%
 	}
 %>
+
 </body>
 </html>
