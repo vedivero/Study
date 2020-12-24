@@ -46,6 +46,7 @@
 				<tr height="50">
 					<td align="center" colspan="2">
 						<input type="submit" value="modify"> &nbsp; &nbsp;
+						<input type="hidden" name="id" value=<%=mbean.getId() %>>
 		</form>
 						<button onclick="location.href='MemberList.jsp'">회원 전체 보기</button>
 					</td>

@@ -163,4 +163,28 @@ public class MemberDAO {
 		return bean;
 	}
 	
+	
+	//한 회원의 패스워드 값을 return하는 method
+	public String getPass(String id){
+		
+		String pass="";
+
+		try {
+			getCon();
+			
+			sql ="select pass1 from member where id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+				pass = rs.getString(1);
+			}
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return pass;
+	}
 }
