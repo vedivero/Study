@@ -4,12 +4,12 @@
 <html>
 <body>
 
-	<table width="600">
-		<tr height="400">
-			<td align="center">
-				<img alt="" src="img/auto.PNG" width="500" height="400">
-			</td>
-		</tr>
-	</table>
+		<table width="600">
+			<tr height="400">
+				<td align="center">
+					<img alt="" src="img/snow.PNG" width="500" height="400">
+				</td>
+			</tr>
+		</table>
 </body>
 </html>

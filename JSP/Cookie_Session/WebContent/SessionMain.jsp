@@ -24,7 +24,6 @@
 	
 %>
 			
-			
 			<!-- top -->
 			<tr height="150">
 				<td align="center" colspan="2">

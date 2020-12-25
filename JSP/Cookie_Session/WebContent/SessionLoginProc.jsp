@@ -20,6 +20,8 @@
 	
 	//Session의 유지시간 설정
 	session.setMaxInactiveInterval(3600);
+	
+	response.sendRedirect("SessionMain.jsp");
 %>
 	<h2>Your ID is <%=id%></h2><hr>
 	<h2>Your Password is <%=pass %></h2><hr>

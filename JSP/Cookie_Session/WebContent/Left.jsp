@@ -7,22 +7,22 @@
 	<table width="200">
 		<tr height="60">
 			<td width="200" align="center">
-				<a href="SessionMain.jsp?=center=Snowpeak.jsp">스노우피크</a>
+				<a href="SessionMain.jsp?center=SnowPeak.jsp">스노우피크</a>
 			</td>
 		</tr>
 		<tr height="60">
 			<td width="200" align="center">
-				<a href="SessionMain.jsp?=center=Snowpeak.jsp">콜맨</a>
+				<a href="SessionMain.jsp?center=CallMan.jsp">콜맨</a>
 			</td>
 		</tr>
 		<tr height="60">
 			<td width="200" align="center">
-				<a href="SessionMain.jsp?=center=Snowpeak.jsp">지프</a>
+				<a href="SessionMain.jsp?center=SnowPeak.jsp">지프</a>
 			</td>
 		</tr>
 		<tr height="60">
 			<td width="200" align="center">
-				<a href="SessionMain.jsp?=center=Snowpeak.jsp">코베아</a>
+				<a href="SessionMain.jsp?center=SnowPeak.jsp">코베아</a>
 			</td>
 		</tr>
 	</table>
