@@ -1,0 +1,9 @@
+  <Context docBase="DataBase" path="/DataBase" reloadable="true" source="org.eclipse.jst.jee.server:DataBase">
+  
+  	<!-- Connection Pool사용하기 위한 설정 -->
+  	<Resource name="jdbc/pool" auth="Container" type="javax.sql.DataSource"
+  			  driverClassName="com.mysql.jdbc.Driver" loginTimeout="10" maxWaih="5000"
+  			  username="root" password="1234" url="jdbc:mysql://localhost:3306/jsp"/>
+
+  			<!-- auth:관리, Container(tomcat)가 관리 -->
+  </Context>

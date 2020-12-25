@@ -7,6 +7,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class MemberDAO {
 
 	//Data Access Object
@@ -29,17 +33,37 @@ public class MemberDAO {
 		
 	public void getCon(){
 		
-		try{
-			Class.forName("com.mysql.jdbc.Driver");
+		//Connection Pool을 이용해 Database에 접근
+		try {
+			//외부에서 Data를 읽어야 하기에 Context를 사용
+			Context initctx = new InitialContext();
 			
-			con = DriverManager.getConnection(url, id, pw);
-				
-				
-			}catch(Exception e){
+			//Tomcat Server에 저장된 위치 = Tomcat에 정보를 담아놓은 곳으로 이동
+			Context envtx = (Context) initctx.lookup("java:comp/env");	//lookup : ~를 찾다
+
+			//DataSource안에 username, password, url 등의 정보가 들어가 있으니 객체만 호출
+			DataSource ds = (DataSource) envtx.lookup("jdbc/pool");
 			
+			//DataSource를 기준으로 Connection을 연결
+			con = ds.getConnection();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		
 	}
+		//서버 Container에 입력한 Context를 가져다 사용할 것이기에 필요 없어진다.
+//		try{
+//			Class.forName("com.mysql.jdbc.Driver");
+//			
+//			con = DriverManager.getConnection(url, id, pw);
+//				
+//				
+//			}catch(Exception e){
+//			
+//		}
+//		
+//	}
 	
 	//회원가입 method
 	public void insertMember(MemberBean mbean){
