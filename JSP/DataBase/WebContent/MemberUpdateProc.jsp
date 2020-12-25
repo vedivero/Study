@@ -19,7 +19,7 @@
 	MemberDAO mdao = new MemberDAO();
 	
 	//DataBase에서 꺼내온 PassWord값이 저장
-	String pass = mdao.getPass(id);
+	String pass = mdao.getPass(mbean.getId());
 	
 	//입력받은 PassWord값과 DataBase에서 가져온 PassWord값이 같은지를 비교 후
 	if(mbean.getPass1().equals(pass)){
