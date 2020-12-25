@@ -11,7 +11,7 @@
 					<tr height="50">
 						<td width="150">ID</td>
 						<td>
-							<input type="text" name="id" ">
+							<input type="text" name="id">
 						</td>
 					</tr>
 					<tr height="50">
