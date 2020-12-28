@@ -13,5 +13,21 @@ public class TPC02 {
 	b=2;
 	c=a+b;
 	System.out.println(c);
+	
+	float f;
+	f=34.5f;
+	System.out.println(f);
+	
+	char d;
+	d = 'a';
+	System.out.println(d);
+	
+	boolean g;
+	g=true;
+	System.out.println(g);
+
+//	Book bk;
+	
 	}
+	
 }
