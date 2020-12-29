@@ -1,0 +1,41 @@
+<final field>
+
+final field : 최종적으로 가지고 있는 field = 한 번 선언하면 수정할 수 없는 field
+
+ㅡ
+field 초기값 지정 방법
+
+1.field선언할 때
+
+	public Stirng nation = "Korea";
+	
+2.생성자에서 부여하는 방법
+	//외부에서 받은 data로 field값 초기화
+	final String ssn;
+	
+	public Person(String ssn){
+		this.ssn = ssn;
+	}
+	
+	
+	
+<static final[상수]>
+
+[field] = 객체마다 가지는 불변의 Instance Field
+[Static Field][상수] = 객체마다 가지고 있지 않고, method 영역에 Class별로 관리되는 불변의 Static Field = 공용 data로 사용
+
+	ㅡ
+	상수는 '전부 대문자'로 작성하는 것이 관례
+	
+	ㅡ
+	상수의 초기화
+	
+	1.static final type 상수 [=초기값];
+	
+	2.static final type 상수
+		
+		static {
+				상수 = 초기값;
+		}
+		
+		
