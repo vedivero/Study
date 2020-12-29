@@ -4,7 +4,7 @@ import sec13.exam03_field_method_access.package1.*;
 
 public class C {
 
-	public C{
+	public C(){
 		A a = new A();
 		
 		a.field1 = 1;
