@@ -1,0 +1,14 @@
+<Access Modifier>
+
+Class 및 Class의 구성 멤버에 대한 Access(접근)을 제한하는 역할
+
+[public], [protected], [default], [private]
+
+
+[public]
+
+[protected]
+
+[default]
+
+[private]
