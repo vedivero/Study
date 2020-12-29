@@ -1,0 +1,14 @@
+
+<field>
+
+객체 마다 가지고 있어야할 데이터 : instance field로 선언
+	ex) 계산기마다 색상이 다르다 → String color;
+
+객체와는 상관없이 공용적으로 사용되는 데이터 : Static field로 선언하는게 메모리 사용성에서 우수함
+	ex) 계산기에서 사용되는 파이값은 계산기의 색상과는 무관하게 똑같다 → static double pi = 3.14;
+
+<method>
+
+instance field로 작업할 method = instance method사용
+instance field로 작업하지 않는 method = static method사용
+
