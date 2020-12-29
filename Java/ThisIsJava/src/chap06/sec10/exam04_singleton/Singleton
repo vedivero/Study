@@ -1,0 +1,15 @@
+
+하나의 application 내에서 단 하나만 생성되는 '객체'
+
+ㅡ
+만드는 방법
+
+	1.외부에서 new연산자로 생성자를 호출할 수 없도록 막는다
+	
+		private접근 제한자로 생성자를 생성
+		
+	2.Class자신의 type으로 static field를 선언하고 자신의 객체를 생성해 초기화( =new class(); )
+	
+	3.외부에서 호출할 수 있는 static method인 getInstance()를 선언
+	
+		
