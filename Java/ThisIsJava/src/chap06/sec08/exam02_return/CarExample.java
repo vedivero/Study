@@ -18,7 +18,7 @@ public class CarExample {
 			System.out.println("gas가 충분합니다");
 		
 		}else{
-			System.out.println("gas를 주입하세요");
+			System.out.println("gas를 주입 하세요");
 		}
 
 	}
