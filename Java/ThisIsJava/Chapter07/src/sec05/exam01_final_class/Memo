@@ -1,0 +1,11 @@
+
+·Final Field : 수정할 수 없는 Field
+<상속과 관련>
+
+·Final Class : 부모로 사용할 수 없는 Class //ex)String class
+
+	public final class 클래스 { ...} //하위 클래스를 만들지 못하게 정의
+	
+·Final Method : 자식이 재 정의할 수 없는 method
+
+	public final returnType method(parameter){}	//하위 클래스가 재 정의 못하게 정의
