@@ -35,8 +35,9 @@ public class StudentExample {
 			 * 
 			 *2.자식 생성자 안에 명시적으로 선언한 부모 생성자 (super(name,ssn))에 대입되고
 			 *3.부모 생성자에 입력받은 name과, ssn이 들어와서 field에 설정된다.
+			 
 			 */
-			 */
+	
 	}
 
 }
