@@ -1,0 +1,21 @@
+
+<Annotation>
+
+	프로그램에게 추가적인 정보를 제공해주는 metadata
+	
+	
+[용도]
+
+1.compile에게 code 작성 문법 error를 check하도록 정보를 제공
+
+	ex)method가 재정의 되었는지 확인 : @Override
+	
+2.software 개발 tool이 build나 배치 시 code를 자동으로 생성할 수 있도록 정보를 제공
+
+	ex) xml설정 파일을 자동 생성하거나 배포를 위한 jar 압축 파일을 자동 생성할 수 있다.
+	
+3.run time(실행)시 특정 기능을 실행하도록 정보를 제공
+
+	ex) 객체가 Application내부에서 해야할 역할을 정의할 수 있다 (Servlet, Controller)
+	
+	
