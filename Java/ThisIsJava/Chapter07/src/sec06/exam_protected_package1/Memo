@@ -1,0 +1,5 @@
+<Protected Access>
+
+	protect = 같은 package내에서만 호출이 가능하다
+			    단,다른 package라도 해당 class를 상속받은 SubClass에서는 호출 가능 
+
