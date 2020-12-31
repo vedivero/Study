@@ -1,0 +1,29 @@
+Type변환과 다형성(Polymorphism)의 차이
+
+다형성 : 같은 타입이지만 실행 결과가 다양한 객체를 이용할 수 잇는 성질
+	
+	조건 : 부모 타입에는 모든 자식 객체가 대입될 수 있다. (자식 타입은 부모 타입으로 자동 타입 변환된다)
+	
+		[예시1]
+			SuperClass : a , Subclass = b,c
+			
+		ex) A a = new B(); 
+		    A a = new C();
+		    
+		[예시2]
+		
+		SuperClass : Animal	//종류
+		SubClass : Cat, Dog
+		
+			Animal a = new Cat();
+			Animal a = new dog();
+			
+			
+ㅡ
+자동 타입 변환[Promotion] : 참조 타입일 경우 
+
+	Car cat = new Cat();
+							=	Animal animal = new Cat();
+	Animal animal = cat;	
+	
+	cat == animal		//true
