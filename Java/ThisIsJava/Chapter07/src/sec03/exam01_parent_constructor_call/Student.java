@@ -12,6 +12,7 @@ public class Student extends People{
 	// 		super(); //기본 생성자를 호출하지만 해당 기본 생성자가 없기에 컴파일 에러 발생
 	//}
 	
+	//Super Class에서 매개변수를 받는 생성자를 생성했으므로
 	//명시적으로 부모 생성자의 매개값을 확인해서 작성
 	public Student(String name,String ssn,int studentNo){
 		//super("홍길동","123123-123123");

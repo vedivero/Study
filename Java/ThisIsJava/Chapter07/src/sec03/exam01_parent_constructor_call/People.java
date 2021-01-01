@@ -1,5 +1,6 @@
 package sec03.exam01_parent_constructor_call;
 
+//생성자 호출
 public class People {
 
 	public String name;

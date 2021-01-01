@@ -1,10 +1,11 @@
 package sec02.exma01_inheritance;
 
-//CellPhone의 하위 클래스
+//CellPhone의 하위 클래스, CellPhone class를 상속
 public class DmbCellPhone extends CellPhone{
 
 	int channel;
 	
+	//생성자
 	//외부로부터 data를 받아 설정
 	DmbCellPhone(String model,String color,int channel){
 		this.model = model;

@@ -10,6 +10,7 @@ public class DmbCellPhoneExample {
 		System.out.println("채널 :"+dcp.channel);
 		System.out.println("색상 :"+dcp.color);
 		
+		//DmbCellPhone이 상속받은 CellPhone Class내의 method를 호출
 		dcp.powerOn();
 		dcp.powerOff();
 		dcp.bell();
