@@ -5,7 +5,7 @@ public class InstanceofExample {
 	//Parent의 SubClass도 Parameter로 대입 가능
 	public static void method1(Parent parent){
 
-		//변환하기 전에 parent가 참조하는 객체가 Child로 부터 만들어진 Class 객체인지를 검사
+		//변환하기 전에 parent가 참조하는 객체가 Child로 부터 만들어진 객체인지를 검사, Child로 부터 생성된 객체일 경우 = true return
 		if(parent instanceof Child){
 		
 			//parent에 대입된 객체를 강제 변환
@@ -13,8 +13,10 @@ public class InstanceofExample {
 			//Child가 아닌 다른 객체가 들어오면 'Class Casting Exception'이 발생
 			
 			System.out.println("method1() : Child로 변환 성공");
+		
 		}else{
-		System.out.println("method1() : Child로 변환 실패");
+			
+			System.out.println("method1() : Child로 변환 실패");
 		}
 	}
 	
