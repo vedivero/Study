@@ -12,6 +12,7 @@ public class PromotionExample {
 		D d = new D();
 		E e = new E();
 		
+		//Type만 다르고 같은 객체를 가리킨다.
 		A a1 = b; //참조변수 b에 들은 객체 B는 A를 상속했으므로 대입 가능
 		A a2 = c;
 		A a3 = d;
