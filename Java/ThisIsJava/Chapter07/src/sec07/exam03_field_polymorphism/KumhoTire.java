@@ -6,15 +6,12 @@ public class KumhoTire extends Tire{
 	//Super Class를 상속 받은 Sub Class에는 부모의 기본 생성자(super();)만 추가 되기 때문에
 	//Sub Class에서 Super Class로 해당 Parameter를 넘겨줘야 한다
 	public KumhoTire(String location, int maxRotation){
-	
 		super(location, maxRotation);
-
 	}
 
 	//roll() 재 정의
 	@Override
 	public boolean roll() {
-		
 		++accumulatedRotation;
 		
 		if(accumulatedRotation < maxRotation){
@@ -25,7 +22,5 @@ public class KumhoTire extends Tire{
 			return false;	//Tire사용 불가 = false
 		}
 	}
-	
-	//roll() override
 	
 }

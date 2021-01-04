@@ -14,5 +14,4 @@ public class Child extends Parent {
 		System.out.println("Child method3()");
 	}
 
-	
-}
+ }
