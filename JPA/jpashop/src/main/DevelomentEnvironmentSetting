@@ -1,0 +1,39 @@
+<환경설정>
+
+1.Spring Web Starter
+
+	RESTful,Spring MVC,Apache Tomcat을 기본적으로 내장하고 있는 것을 추가
+	(Web Application 개발에 필요)
+
+2.Thymeleaf(Modern server-side java template engine)
+	(성능이나 여러가지 issue로 인해 JSP를 거의 사용하지 않는다. 내장 Tomcat에서도 권장하지 않는다.)
+
+3.JPA(Spring Data JPA)=Java Persistence API
+	(Spring Data와 Hiberate를 가지고 사용한다)
+
+	스프링 부트랑 JPA를 가지고 어떻게 Application을 잘 만들 수 있는지를 설명.
+	스프링 부트 JPA를 활용해서 Application만드는 방법을 아는 것이 중요.
+		ㅡ이것을 잘 이해한 상태에서 Spring JPA를 사용하면 Spring DATA JPA를 금방 배운다.
+
+	JPA를 알고 사용하는 것과 모르고 사용하는 것은 굉장히 다르다.
+		ㅡJPA를 깊이 알고 Spring DATA JPA는 도움용으로 사용하는 것을 추천
+
+4.H2 DataBase
+
+	MySql도 있지만, H2는 개발,Test할 때 사용하기 용이, DataBase를 내장해서 실행하고 간단하다.
+	(교육용으로 장점이 많다)
+
+5.Lombok(reduce boilerplate code) = 반복하는 코드를 줄여준다.
+
+	Java Getter & Setter처럼
+	간단한 Annotation하나로 Code를 자동으로 정리해주는 Library
+
+
+여담.
+Spring Boot가 없던 시절 웹 Apllication 개발하는 환경 설정하는데만 일주일 걸렸던 것 같다.
+
+
+<Lombok setting>
+ctrl+shift+A → annotation processing → Enable Annotation Processing 체크
+
+<Lombok Test>
