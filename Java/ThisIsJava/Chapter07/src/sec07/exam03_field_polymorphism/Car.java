@@ -1,8 +1,7 @@
 package sec07.exam03_field_polymorphism;
 
-import sec07.exam04_array_management.Tire;
 
-public class Car {
+public class Car { 
 	
 	//Field 4개 선언
 	
@@ -42,11 +41,11 @@ public class Car {
 			return 4;
 		}
 
-		//5개의 숫자중 한 숫자를 return
+		//5개의 숫자(0,1,2,3,4)중 한 숫자를 return
 		return 0;
 		  
 	}
-		
+		 
 	void stop(){
 		System.out.println("자동차가 멈춥니다");
 	}
