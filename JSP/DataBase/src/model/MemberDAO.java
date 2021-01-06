@@ -39,7 +39,7 @@ public class MemberDAO {
 			Context initctx = new InitialContext();
 			
 			//Tomcat Server에 저장된 위치 = Tomcat에 정보를 담아놓은 곳으로 이동
-			Context envtx = (Context) initctx.lookup("java:comp/env");	//lookup : ~를 찾다
+			Context envtx = (Context) initctx. lookup("java:comp/env");	//lookup : ~를 찾다
 
 			//DataSource안에 username, password, url 등의 정보가 들어가 있으니 객체만 호출
 			DataSource ds = (DataSource) envtx.lookup("jdbc/pool");
