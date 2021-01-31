@@ -28,11 +28,31 @@
 		<!-- SqlSessionFactory -->
 		<!-- MyBatis와 MySQL연결 -->
 		<!-- Need My Batis-Spring module -->
-		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<bean id="sqlSessionFactory"
+				class="org.mybatis.spring.SqlSessionFactoryBean">
+			
 			<property name="dataSource" ref="dataSource"/>
 			<!-- mybaits-config.xml파일이 Spring이 동작할 때 같이 동작하도록 설정 -->
-			<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
-			
+			<property name="configLocation"
+						value="classpath:/mybatis-config.xml"></property>
+
+			<!-- 어떤 폴더이건 파일의 이름이 Mapper.xml로 끝나면 자동으로 인식하도록 설정하는 것 -->
+			<property name="mapperLocations"
+						value="classpath:mappers/**/*Mapper.xml"></property>
+
 		</bean>
+
+		<!-- MyBatis에서 제공하는 SqlSessionTemplate은 MyBatis의 SqlSEssion인터페이스를
+		구현한 클래스로 기본적인 트랜잭션의 관리나 쓰레드 처리의 안정성등을 보장해주고 데이터베이스의 연결과 종료를 책임진다 -->
+		<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"
+			destroy-method="clearCache">
 		
+			<constructor-arg name="sqlSessionFactory"
+				ref="sqlSessionFactory"></constructor-arg>	
+			
+		</bean>		
+		
+		<!-- 이 코드로 인해 MemberDAOImpl 클래스가 스프링의 빈으로 등록(해당 클래스에 S아이콘 생성)-->
+		<context:component-scan base-package="org.zerock.persistence">
+		</context:component-scan>
 </beans>
