@@ -20,7 +20,7 @@ public class MemberDAOTest {
 	@Test
 	public void testTime()throws Exception{
 		
-		System.out.println(dao.getTime());
+		System.out.println("현재 시간"+dao.getTime());
 		
 	}
 	

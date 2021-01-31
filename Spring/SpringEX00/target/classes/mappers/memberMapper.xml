@@ -13,4 +13,16 @@
  		insert into tbl_member (userid,userpw,username,eamil)
  		values(#{userid},#{userpw},#{username},#{email})
  	</insert>
+ 	
+ 	<select id="selectMember" resultType="org.zerock.domain.MemberVO">
+ 		select *
+ 		from tbl_member
+ 		where userid = #{userid}
+ 	</select>
+ 	
+ 	<select id="readWirhPw" resultType="org.zerock.domain.MemberVO">
+ 		select * 
+ 		from tbl_member
+ 		where userid = #{userid} and userpw = #{userpw}
+ 	</select>
  </mapper>

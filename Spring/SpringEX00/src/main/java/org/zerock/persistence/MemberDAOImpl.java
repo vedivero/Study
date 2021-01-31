@@ -2,6 +2,9 @@ package org.zerock.persistence;
 
 import javax.inject.Inject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 import org.zerock.domain.MemberVO;
@@ -25,6 +28,24 @@ public class MemberDAOImpl implements MemberDAO {
 	public void insertMember(MemberVO vo) {
 		sqlSession.insert(namespace+".insertMember",vo);		
 	}
+
+	@Override
+	public MemberVO readMember(String userid) throws Exception {
+		
+		return sqlSession.selectOne(namespace+".selectMember",userid);
+	}
+
+	@Override
+	public MemberVO readWIthPw(String userid, String userpw) throws Exception {
+		
+		Map<String , Object> paramMap = new HashMap<String,Object>();
+		
+		paramMap.put("userid", userid);
+		paramMap.put("userpw", userpw);
+		
+		return sqlSession.selectOne(namespace+".readWithPw", paramMap);
+	}
+	
 	
 	
 }
