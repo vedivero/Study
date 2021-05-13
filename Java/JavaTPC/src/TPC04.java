@@ -31,14 +31,16 @@ public class TPC04 {
 	}
 	
 	public static void hap1(int[] x){
+		
+		//int sum = x[0]+x[1]+x[2];
+		
 		//배열은 반복문을 사용해 data추출
-
-			int sum = 0;
-			for(int i=0; i<x.length; i++){
-				sum += x[i];
-				
-			}
-			System.out.println(sum);
+		int sum = 0;
+		for(int i=0; i<x.length; i++){
+			sum += x[i];
+			
+		}
+		System.out.println(sum);
 			
 		}
 		
