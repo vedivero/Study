@@ -10,11 +10,13 @@ public class TPC10 {
 		//BookDTO b = 새로운 자료형을 생성(객체 생성) -> 사용자가 정의
 		
 		//'책' 이라는 객체를 class로 생성한다. -> public class BookDTO
+		
 		//'책'을 구성하고 있는 속성들을 선언
 		// public String title;
 		// public int price;
 		// public String company;
 		// public int page;
+		
 		// new BookDTO(); = new 생성자 메서드에 의해 -> [Heap Area]에 load
 		
 		// 기본생성자 = 객체를 생성해준다.
@@ -36,16 +38,6 @@ public class TPC10 {
 		System.out.println(b.company+"\t");
 		System.out.println(b.page+"\t");
 		System.out.println(b.price+"\t");
-		
-		
-		
-		
-		
-	
-		
-		
-		
-		
 		
 	}
 
