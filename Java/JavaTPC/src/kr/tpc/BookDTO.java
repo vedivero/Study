@@ -13,4 +13,14 @@ public class BookDTO {
 		//객체를 생성하는 작업을 한다. (기계어 코드) -> 메모리에 기억공간을 생성하는 작업
 		super();
 	}
+
+	public BookDTO(String title, int price, String company, int page) {
+		super();
+		this.title = title;
+		this.price = price;
+		this.company = company;
+		this.page = page;
+	}
+	
+	
 }
