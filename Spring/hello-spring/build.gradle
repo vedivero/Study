@@ -14,6 +14,7 @@ repositories {
 }
 
 dependencies {
+	//템플릿 엔진 - HTML 생성해주는 라이브러리
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	//JUnit Library
