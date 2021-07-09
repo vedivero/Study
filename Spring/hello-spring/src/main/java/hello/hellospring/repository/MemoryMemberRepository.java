@@ -43,5 +43,8 @@ public class MemoryMemberRepository implements MemberRepository {
         //루프돌리기 편해서 실무에서는 List를 많이 사용한다.
         return new ArrayList<>(store.values()); //store의 member가 반환
     }
-    
+
+    public void clearStore() {
+        store.clear();
+    }
 }
